@@ -2,6 +2,7 @@
     "name": "jinjie/geocodable-maps-js",
     "description": "Add Google Map JS to Addressable module in Silverstripe 4",
     "type": "silverstripe-vendormodule",
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "SwiftDevLabs\\GeocodableMaps\\": "src/"
@@ -9,6 +10,6 @@
     },
     "require": {
         "silverstripe/framework": "^4",
-        "symbiote/silverstripe-addressable:": "^4"
+        "symbiote/silverstripe-addressable": "^4"
     }
 }
