@@ -1,6 +1,6 @@
 <h1 align="center">Welcome to jinjie/geocodable-maps-js 👋</h1>
 <p>
-  <img src="https://img.shields.io/badge/version-1.1.0-blue.svg" />
+  <img src="https://img.shields.io/badge/version-1.2.0-blue.svg" />
 </p>
 
 > Add Google Map JS to Addressable module in Silverstripe 4
