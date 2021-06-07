@@ -34,10 +34,23 @@ class GeocodableMapJs extends DataExtension
             'async' => 'async'
         ]);
 
+        Requirements::customScript(<<<EOF
+            function initMap{$this->owner->ID}() {
+                const marker{$this->owner->ID} = { lat: {$this->owner->Lat}, lng: {$this->owner->Lng} };
+                const map{$this->owner->ID} = new google.maps.Map(document.getElementById("geocodable-map-{$this->owner->ID}"), {
+                    zoom: {$zoom},
+                    center: marker{$this->owner->ID}
+                });
+                const marker = new google.maps.Marker({
+                    position: marker{$this->owner->ID},
+                    map: map{$this->owner->ID}
+                });
+            }
+        EOF);
+
         return $this
             ->owner
             ->customise([
-                'Zoom'   => $zoom,
                 'Width'  => is_numeric($width) ? "{$width}px" : $width,
                 'Height' => is_numeric($height) ? "{$height}px" : $height,
             ])
